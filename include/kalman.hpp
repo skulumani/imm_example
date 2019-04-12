@@ -14,6 +14,9 @@
 class KalmanFilter {
     public:
         KalmanFilter( void );
+        KalmanFilter( const size_t& dim_x_in,
+                const size_t& dim_z_in,
+                const size_t& dim_u_in);
         KalmanFilter( const Eigen::Ref<const Eigen::MatrixXd>& F,
                 const Eigen::Ref<const Eigen::MatrixXd>& B,
                 const Eigen::Ref<const Eigen::MatrixXd>& Q,
