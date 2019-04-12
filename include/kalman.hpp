@@ -21,13 +21,22 @@ class KalmanFilter {
                 const Eigen::Ref<const Eigen::MatrixXd>& R);
 
         virtual ~KalmanFilter( void ) {};
+        
+        void set_state(const Eigen::Ref<const Eigen::VectorXd>& x_in);
+        void set_cov(const Eigen::Ref<const Eigen::MatrixXd>& P_in);
+        
+        Eigen::VectorXd get_state( void ) const;
+        Eigen::MatrixXd get_cov( void ) const;
 
-
+        void predict( void ); // predict one step
+        void update( const Eigen::Ref<const Eigen::VectorXd>& z_in );
     private:
         
-        // initialize everything else
+        // initialize all the member variables so we don't get in trouble
         void init( void );
         
+        size_t dim_x, dim_z, dim_u; // size of arrays
+
         Eigen::VectorXd x; // state estimate
         Eigen::MatrixXd P; // covariance
         Eigen::MatrixXd Q, R; // process and measurement covariance
