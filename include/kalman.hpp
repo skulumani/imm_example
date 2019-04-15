@@ -17,11 +17,11 @@ class KalmanFilter {
         KalmanFilter( const size_t& dim_x_in,
                 const size_t& dim_z_in,
                 const size_t& dim_u_in);
-        KalmanFilter( const Eigen::Ref<const Eigen::MatrixXd>& F,
-                const Eigen::Ref<const Eigen::MatrixXd>& B,
-                const Eigen::Ref<const Eigen::MatrixXd>& Q,
-                const Eigen::Ref<const Eigen::MatrixXd>& H,
-                const Eigen::Ref<const Eigen::MatrixXd>& R);
+        KalmanFilter( const Eigen::Ref<const Eigen::MatrixXd>& F_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& B_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& Q_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& H_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& R_in);
 
         virtual ~KalmanFilter( void ) {};
         

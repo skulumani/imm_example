@@ -17,6 +17,17 @@ KalmanFilter::KalmanFilter(const size_t& dim_x_in, const size_t& dim_z_in,
     init();
 }
 
+KalmanFilter::KalmanFilter( const Eigen::Ref<const Eigen::MatrixXd>& F_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& B_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& Q_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& H_in,
+                const Eigen::Ref<const Eigen::MatrixXd>& R_in) {
+
+    // get the dimensions for elements
+
+    // initialize all member variables
+    // update with input elements
+}
 void KalmanFilter::init( void ) {
 // initialize all our matrices and sizes
 
