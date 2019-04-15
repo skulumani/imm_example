@@ -2,9 +2,12 @@
 
 ## Dependencies
 
-C++ gcc
-Eigen
-Boost ODEINT
+~~~
+sudo apt-get install build-essential cmake libeigen3-dev
+~~~
+
+* C++ gcc
+* Eigen
 
 ## TODO
 
